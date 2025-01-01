@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query"
 import { getProjectById } from "@/api/ProjectAPI"
 import EditProjectForm from "@/components/projects/EditProjectForm"
 import AddTaskModal from "@/components/tasks/AddTaskModal"
+import TaskList from "@/components/tasks/TaskList"
 
 export default function ProjectDetailsView() {
 
@@ -29,7 +30,9 @@ export default function ProjectDetailsView() {
           onClick={() => navigate(location.pathname + '?newTask=true')}
         >Agregar tarea</button>
       </nav>
-
+      <TaskList
+        tasks={data.tasks}
+      />
       <AddTaskModal />
     </>
   )
