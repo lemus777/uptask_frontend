@@ -11,10 +11,11 @@ export default function EditTaskData() {
   const queryParams = new URLSearchParams(location.search)
   const taskId = queryParams.get('editTask')!
   
-  const { data } = useQuery({
+  const { data, isError } = useQuery({
     queryKey: ['task', taskId],
     queryFn: () => getTaskById({projectId, taskId}),
     enabled: !!taskId
   })
-  if (data) return <EditTaskModal data={data.data} />
+  if (isError) return <Navigate to={'/404'} />
+  if (data) return <EditTaskModal data={data.data} taskId={taskId} />
 }
