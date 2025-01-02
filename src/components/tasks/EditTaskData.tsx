@@ -16,5 +16,5 @@ export default function EditTaskData() {
     queryFn: () => getTaskById({projectId, taskId}),
     enabled: !!taskId
   })
-  if (data) return <EditTaskModal />
+  if (data) return <EditTaskModal data={data.data} />
 }
