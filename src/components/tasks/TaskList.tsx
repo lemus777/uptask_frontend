@@ -1,4 +1,4 @@
-import { Task } from "@/Types/index";
+import { Task } from "types/index";
 import TaskCard from "./TaskCard";
 import { statusTranslations } from "@/locales/es"
 

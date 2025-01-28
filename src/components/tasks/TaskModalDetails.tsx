@@ -6,7 +6,7 @@ import { getTaskById, updateStatus } from "@/api/TaskAPI";
 import { toast } from "react-toastify";
 import { formatDate } from "@/utils/utils";
 import { statusTranslations} from "@/locales/es";
-import { TaskStatus } from "@/Types/index"
+import { TaskStatus } from "types/index"
 
 export default function TaskModalDetails() {
 

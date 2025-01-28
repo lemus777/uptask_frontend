@@ -3,7 +3,7 @@ import { Menu, Transition } from '@headlessui/react'
 import { EllipsisVerticalIcon } from '@heroicons/react/20/solid'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
-import { Task } from "@/Types/index"
+import { Task } from "types/index"
 import { deleteTask } from '@/api/TaskAPI'
 import { toast } from 'react-toastify'
 

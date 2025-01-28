@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { PinInput, PinInputField } from "@chakra-ui/pin-input";
 import { useMutation } from '@tanstack/react-query'
-import { ConfirmToken } from "@/Types/index";
+import { ConfirmToken } from "types/index";
 import { confirmAccount } from "@/api/AuthAPI";
 import { toast } from "react-toastify";
 

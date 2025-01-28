@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useMutation, useQueryClient } from "@tanstack/react-query"
-import { Task, TaskFormData } from "@/Types/index";
+import { Task, TaskFormData } from "types/index";
 import { useForm } from "react-hook-form";
 import TaskForm from "./TaskForm";
 import { updateTask } from "@/api/TaskAPI";

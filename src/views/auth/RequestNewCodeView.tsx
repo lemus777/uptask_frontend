@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query"
-import { RequestConfirmationCodeForm } from "../../Types";
+import { RequestConfirmationCodeForm } from "../../types";
 import ErrorMessage from "@/components/ErrorMessage";
 import { requestConfirmationCode } from "@/api/AuthAPI";
 import { toast } from "react-toastify";
