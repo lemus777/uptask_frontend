@@ -11,7 +11,7 @@
       "@/views/*": ["views/*"],
       "@/layouts/*": ["layouts/*"],
       "@/api/*": ["api/*"],
-      "@/Types/*": ["Types/*"],
+      "@/types/*": ["types/*"],
       "@/lib/*": ["lib/*"],
       "@/utils/*": ["utils/*"],
       "@/locales/*": ["locales/*"],
