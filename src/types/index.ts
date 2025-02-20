@@ -49,13 +49,15 @@ export const projectSchema = z.object({
   projectName: z.string(),
   clientName: z.string(),
   description: z.string(),
+  manager: z.string(userSchema.pick({_id: true}))
 })
 export const dashboardProjectSchema = z.array(
   projectSchema.pick({
     _id: true,
     projectName: true,
     clientName: true,
-    description: true
+    description: true,
+    manager: true
   })
 )
 export type Project = z.infer<typeof projectSchema>
