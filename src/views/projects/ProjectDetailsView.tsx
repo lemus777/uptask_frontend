@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { getProjectById } from "@/api/ProjectAPI";
@@ -19,6 +20,9 @@ export default function ProjectDetailsView() {
     queryFn: () => getProjectById(projectId),
     retry: false,
   });
+  const canEdit = useMemo(() => data?.manager === user?._id, [data, user])
+  console.log(canEdit)
+
   if (isLoading && authLoading) return "Cargando";
   if (isError) return <Navigate to="/404" />;
   if (data && user)
@@ -45,7 +49,7 @@ export default function ProjectDetailsView() {
             </Link>
           </nav>
         )}
-        <TaskList tasks={data.tasks} />
+        <TaskList tasks={data.tasks} canEdit={canEdit} />
         <AddTaskModal />
         <EditTaskData />
         <TaskModalDetails />
