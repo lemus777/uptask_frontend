@@ -34,7 +34,13 @@ export default function TaskCard({ task, canEdit }: TaskCardProps) {
   });
 
   const style = transform ? {
-    transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`
+    transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
+    padding: "1.25 rem",
+    backgroundColor: '#FFF',
+    width: '300px',
+    display: 'flex',
+    borderWidth: '1px',
+    borderColor: 'rgb(203 213 225 / var(--tw-border-opacity))'
   } : undefined
 
   return (
@@ -46,15 +52,11 @@ export default function TaskCard({ task, canEdit }: TaskCardProps) {
         style={style}
         className="min-w-0 flex flex-col gap-y-4"
       >
-        <button
-          type="button"
+        <p
           className="text-xl font-bold text-slate-600 text-left"
-          onClick={() =>
-            navigate(location.pathname + `?viewTask=${task._id}`)
-          }
         >
           {task.name}
-        </button>
+        </p>
         <p className="text-slate-500">{task.description}</p>
       </div>
 
