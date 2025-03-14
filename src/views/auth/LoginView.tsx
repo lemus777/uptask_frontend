@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { Link, UseNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import { UserLoginForm } from "types/index";
 import ErrorMessage from "@/components/ErrorMessage";
@@ -17,7 +17,7 @@ export default function LoginView() {
     formState: { errors },
   } = useForm({ defaultValues: initialValues });
 
-  const navigate = UseNavigate()
+  const navigate = useNavigate()
 
   const { mutate } = useMutation({
     mutationFn: authenticateUser,
